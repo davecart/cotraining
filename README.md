@@ -1,5 +1,5 @@
-# cotraining
-This is an algorithm for aspect-based sentiment analysis using co-training
+# Inferring aspect-specific opinion structure in product reviews using co-training
+This is an algorithm for aspect-based sentiment analysis using co-training, an semi-supervised machine learning algorithm that partitions the machine learning features into two sufficient and uncorrelated "views" and then self-learns.
 
 ### Required data sets
 

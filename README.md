@@ -5,9 +5,11 @@ This is an algorithm for aspect-based sentiment analysis using co-training, an s
 
 The application uses data provided by third parties.  To use this project, you'll need to download and unzip:
 
-http://www.cs.uic.edu/~liub/FBS/CustomerReviewData.zip
+http://www.cs.uic.edu/~liub/FBS/CustomerReviewData.zip (Hu and Liu, KDD-2004)
 
-http://metashare.ilsp.gr:8080/repository/browse/semeval-2014-absa-test-data-gold-annotations/b98d11cec18211e38229842b2b6a04d77591d40acd7542b7af823a54fb03a155/
+http://metashare.ilsp.gr:8080/repository/browse/semeval-2014-absa-test-data-gold-annotations/b98d11cec18211e38229842b2b6a04d77591d40acd7542b7af823a54fb03a155/ (Ganu et al., 2009)
+
+Many thanks to the authors and annotators of these two data sets.
 
 ### Executable version
 
@@ -32,7 +34,19 @@ You can use the *exportjar.jardesc* file in Eclipse to package up a new executab
 
 If using this code for anything academic, please cite the paper:
 
-Inferring aspect-specific opinion structure in product reviews using co-training
-Dave Carter and Diana Inkpen
-A. Gelbukh (ed.): CICLing 2015, part II, LNCS 9042, pp. to be determined, 2015.
-DOI: 10.1007/978-3-319-18117-2_z
+    @inproceedings{carter:aspectspecificcotraining,
+     author = {Carter, Dave and Inkpen, Diana},
+     title = {Inferring Aspect-Specific Opinion Structure in Product Reviews using Co-training},
+     booktitle = {Proceedings of CICLing-2015},
+     series = {Lecture Notes in Computer Science 9042},
+     year = {2015},
+     isbn = {978-3-319-18117-2},
+     location = {Cairo, Egypt},
+     pages = {225--240},
+     numpages = {16},
+     url = {http://dx.doi.org/10.1007/978-3-319-18117-2_17},
+     doi = {10.1007/978-3-319-18117-2_17},
+     publisher = {Springer-Verlag},
+     address = {Berlin, Heidelberg},
+    } 
+

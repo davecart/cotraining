@@ -1,0 +1,186 @@
+java -jar processreviews.jar > results.txt 2>&1
+
+SENTENCES, no cotraining
+java -Xmx7000m -jar /Users/davecarter/Dropbox/Thesis\ work/workspace/process-reviews/dist/processreviews-sept2014.jar BINGLIU 6 null 8 2500 PARTIAL >  /Users/davecarter/Dropbox/Thesis\ work/Results\ Sept\ 2014/semeval-sentences-t6cnt8-2500.txt 2>&1 &
+java -Xmx7000m -jar /Users/davecarter/Dropbox/Thesis\ work/workspace/process-reviews/dist/processreviews-sept2014.jar BINGLIU 7 null 9 2500 PARTIAL >  /Users/davecarter/Dropbox/Thesis\ work/Results\ Sept\ 2014/semeval-sentences-t7cnt9-2500.txt 2>&1 &
+
+SENTENCES, cotraining
+java -Xmx8000m -jar /Users/davecarter/Dropbox/Thesis\ work/workspace/process-reviews/dist/processreviews-sept2014.jar BINGLIU 12 13 8 2500 PARTIAL >  /Users/davecarter/Dropbox/Thesis\ work/Results\ Sept\ 2014/semeval-sentences-t12c13t8-2500.txt 2>&1 &
+java -Xmx8000m -jar /Users/davecarter/Dropbox/Thesis\ work/workspace/process-reviews/dist/processreviews-sept2014.jar BINGLIU 13 12 8 2500 PARTIAL >  /Users/davecarter/Dropbox/Thesis\ work/Results\ Sept\ 2014/semeval-sentences-t13c12t8-2500.txt 2>&1 &
+java -Xmx8000m -jar /Users/davecarter/Dropbox/Thesis\ work/workspace/process-reviews/dist/processreviews-sept2014.jar BINGLIU 14 15 9 2500 PARTIAL >  /Users/davecarter/Dropbox/Thesis\ work/Results\ Sept\ 2014/semeval-sentences-t14c15t9-2500.txt 2>&1 &
+java -Xmx8000m -jar /Users/davecarter/Dropbox/Thesis\ work/workspace/process-reviews/dist/processreviews-sept2014.jar BINGLIU 15 14 9 2500 PARTIAL >  /Users/davecarter/Dropbox/Thesis\ work/Results\ Sept\ 2014/semeval-sentences-t15c14t9-2500.txt 2>&1 &
+
+
+TASK2, no cotraining
+java -Xmx7000m -jar /Users/davecarter/Dropbox/Thesis\ work/workspace/process-reviews/dist/processreviews-sept2014.jar SEMEVALTASK4PART2 6 null 8 >  /Users/davecarter/Dropbox/Thesis\ work/Results\ Sept\ 2014/semeval-subtask2-t6cnt8-2500.txt 2>&1 &
+java -Xmx7000m -jar /Users/davecarter/Dropbox/Thesis\ work/workspace/process-reviews/dist/processreviews-sept2014.jar SEMEVALTASK4PART2 7 null 9 >  /Users/davecarter/Dropbox/Thesis\ work/Results\ Sept\ 2014/semeval-subtask2-t7cnt9-2500.txt 2>&1 &
+
+TASK2, cotraining
+java -Xmx7000m -jar /Users/davecarter/Dropbox/Thesis\ work/workspace/process-reviews/dist/processreviews-sept2014.jar SEMEVALTASK4PART2 12 13 8 >  /Users/davecarter/Dropbox/Thesis\ work/Results\ Sept\ 2014/semeval-subtask2-t12c13t8-2500.txt 2>&1
+java -Xmx7000m -jar /Users/davecarter/Dropbox/Thesis\ work/workspace/process-reviews/dist/processreviews-sept2014.jar SEMEVALTASK4PART2 13 12 8 >  /Users/davecarter/Dropbox/Thesis\ work/Results\ Sept\ 2014/semeval-subtask2-t13c12t8-2500.txt 2>&1
+java -Xmx7000m -jar /Users/davecarter/Dropbox/Thesis\ work/workspace/process-reviews/dist/processreviews-sept2014.jar SEMEVALTASK4PART2 14 15 9 >  /Users/davecarter/Dropbox/Thesis\ work/Results\ Sept\ 2014/semeval-subtask2-t14c15t9-2500.txt 2>&1
+java -Xmx7000m -jar /Users/davecarter/Dropbox/Thesis\ work/workspace/process-reviews/dist/processreviews-sept2014.jar SEMEVALTASK4PART2 15 14 9 >  /Users/davecarter/Dropbox/Thesis\ work/Results\ Sept\ 2014/semeval-subtask2-t15c14t9-2500.txt 2>&1
+
+TASK2, cotraining, trying different thresholds
+
+java -Xmx7000m -jar /Users/davecarter/Dropbox/Thesis\ work/workspace/process-reviews/dist/processreviews-sept2014.jar SEMEVALTASK4PART2 12 13 8 2500 EXACT 0.55 >  /Users/davecarter/Dropbox/Thesis\ work/Results\ Sept\ 2014/semeval-subtask2-t12c13t8-2500-c055.txt 2>&1 &
+
+java -Xmx7000m -jar /Users/davecarter/Dropbox/Thesis\ work/workspace/process-reviews/dist/processreviews-sept2014.jar SEMEVALTASK4PART2 12 13 8 2500 EXACT 0.65 >  /Users/davecarter/Dropbox/Thesis\ work/Results\ Sept\ 2014/semeval-subtask2-t12c13t8-2500-c065.txt 2>&1 &
+java -Xmx7000m -jar /Users/davecarter/Dropbox/Thesis\ work/workspace/process-reviews/dist/processreviews-sept2014.jar SEMEVALTASK4PART2 13 12 8 2500 EXACT 0.65 >  /Users/davecarter/Dropbox/Thesis\ work/Results\ Sept\ 2014/semeval-subtask2-t13c12t8-2500-c065.txt 2>&1 &
+java -Xmx7000m -jar /Users/davecarter/Dropbox/Thesis\ work/workspace/process-reviews/dist/processreviews-sept2014.jar SEMEVALTASK4PART2 14 15 9 2500 EXACT 0.65 >  /Users/davecarter/Dropbox/Thesis\ work/Results\ Sept\ 2014/semeval-subtask2-t14c15t9-2500-c065.txt 2>&1 &
+java -Xmx7000m -jar /Users/davecarter/Dropbox/Thesis\ work/workspace/process-reviews/dist/processreviews-sept2014.jar SEMEVALTASK4PART2 15 14 9 2500 EXACT 0.65 >  /Users/davecarter/Dropbox/Thesis\ work/Results\ Sept\ 2014/semeval-subtask2-t15c14t9-2500-c065.txt 2>&1 &
+
+java -Xmx7000m -jar /Users/davecarter/Dropbox/Thesis\ work/workspace/process-reviews/dist/processreviews-sept2014.jar SEMEVALTASK4PART2 12 13 8 2500 EXACT 0.75 >  /Users/davecarter/Dropbox/Thesis\ work/Results\ Sept\ 2014/semeval-subtask2-t12c13t8-2500-c075.txt 2>&1 &
+java -Xmx7000m -jar /Users/davecarter/Dropbox/Thesis\ work/workspace/process-reviews/dist/processreviews-sept2014.jar SEMEVALTASK4PART2 13 12 8 2500 EXACT 0.75 >  /Users/davecarter/Dropbox/Thesis\ work/Results\ Sept\ 2014/semeval-subtask2-t13c12t8-2500-c075.txt 2>&1 &
+java -Xmx7000m -jar /Users/davecarter/Dropbox/Thesis\ work/workspace/process-reviews/dist/processreviews-sept2014.jar SEMEVALTASK4PART2 14 15 9 2500 EXACT 0.75 >  /Users/davecarter/Dropbox/Thesis\ work/Results\ Sept\ 2014/semeval-subtask2-t14c15t9-2500-c075.txt 2>&1 &
+java -Xmx7000m -jar /Users/davecarter/Dropbox/Thesis\ work/workspace/process-reviews/dist/processreviews-sept2014.jar SEMEVALTASK4PART2 15 14 9 2500 EXACT 0.75 >  /Users/davecarter/Dropbox/Thesis\ work/Results\ Sept\ 2014/semeval-subtask2-t15c14t9-2500-c075.txt 2>&1 &
+
+java -Xmx7000m -jar /Users/davecarter/Dropbox/Thesis\ work/workspace/process-reviews/dist/processreviews-sept2014.jar SEMEVALTASK4PART2 12 13 8 2500 EXACT 0.85 >  /Users/davecarter/Dropbox/Thesis\ work/Results\ Sept\ 2014/semeval-subtask2-t12c13t8-2500-c085.txt 2>&1 &
+java -Xmx7000m -jar /Users/davecarter/Dropbox/Thesis\ work/workspace/process-reviews/dist/processreviews-sept2014.jar SEMEVALTASK4PART2 13 12 8 2500 EXACT 0.85 >  /Users/davecarter/Dropbox/Thesis\ work/Results\ Sept\ 2014/semeval-subtask2-t13c12t8-2500-c085.txt 2>&1 &
+java -Xmx7000m -jar /Users/davecarter/Dropbox/Thesis\ work/workspace/process-reviews/dist/processreviews-sept2014.jar SEMEVALTASK4PART2 14 15 9 2500 EXACT 0.85 >  /Users/davecarter/Dropbox/Thesis\ work/Results\ Sept\ 2014/semeval-subtask2-t14c15t9-2500-c085.txt 2>&1 &
+java -Xmx7000m -jar /Users/davecarter/Dropbox/Thesis\ work/workspace/process-reviews/dist/processreviews-sept2014.jar SEMEVALTASK4PART2 15 14 9 2500 EXACT 0.85 >  /Users/davecarter/Dropbox/Thesis\ work/Results\ Sept\ 2014/semeval-subtask2-t15c14t9-2500-c085.txt 2>&1 &
+
+java -Xmx7000m -jar /Users/davecarter/Dropbox/Thesis\ work/workspace/process-reviews/dist/processreviews-sept2014.jar SEMEVALTASK4PART2 12 13 8 2500 EXACT 0.95 >  /Users/davecarter/Dropbox/Thesis\ work/Results\ Sept\ 2014/semeval-subtask2-t12c13t8-2500-c095.txt 2>&1 &
+java -Xmx7000m -jar /Users/davecarter/Dropbox/Thesis\ work/workspace/process-reviews/dist/processreviews-sept2014.jar SEMEVALTASK4PART2 13 12 8 2500 EXACT 0.95 >  /Users/davecarter/Dropbox/Thesis\ work/Results\ Sept\ 2014/semeval-subtask2-t13c12t8-2500-c095.txt 2>&1 &
+on mbp - java -Xmx7000m -jar /Users/davecarter/Dropbox/Thesis\ work/workspace/process-reviews/dist/processreviews-sept2014.jar SEMEVALTASK4PART2 14 15 9 2500 EXACT 0.95 >  /Users/davecarter/Dropbox/Thesis\ work/Results\ Sept\ 2014/semeval-subtask2-t14c15t9-2500-c095.txt 2>&1 &
+on mbp - java -Xmx7000m -jar /Users/davecarter/Dropbox/Thesis\ work/workspace/process-reviews/dist/processreviews-sept2014.jar SEMEVALTASK4PART2 15 14 9 2500 EXACT 0.95 >  /Users/davecarter/Dropbox/Thesis\ work/Results\ Sept\ 2014/semeval-subtask2-t15c14t9-2500-c095.txt 2>&1 &
+
+TASK2, trying different max number of iterations
+
+java -Xmx6000m -jar /Users/davecarter/Dropbox/Thesis\ work/workspace/process-reviews/dist/processreviews-sept2014.jar SEMEVALTASK4PART2 12 null 8 2500 EXACT 0.55 >  /Users/davecarter/Dropbox/Thesis\ work/Results\ Sept\ 2014/semeval-subtask2-t12c13t8-2500-c055-0coiteration.txt 2>&1 &
+java -Xmx6000m -jar /Users/davecarter/Dropbox/Thesis\ work/workspace/process-reviews/dist/processreviews-sept2014.jar SEMEVALTASK4PART2 12 13 8 2500 EXACT 0.55 1 >  /Users/davecarter/Dropbox/Thesis\ work/Results\ Sept\ 2014/semeval-subtask2-t12c13t8-2500-c055-1coiteration.txt 2>&1 &
+java -Xmx6000m -jar /Users/davecarter/Dropbox/Thesis\ work/workspace/process-reviews/dist/processreviews-sept2014.jar SEMEVALTASK4PART2 12 13 8 2500 EXACT 0.55 2 >  /Users/davecarter/Dropbox/Thesis\ work/Results\ Sept\ 2014/semeval-subtask2-t12c13t8-2500-c055-2coiteration.txt 2>&1 &
+java -Xmx6000m -jar /Users/davecarter/Dropbox/Thesis\ work/workspace/process-reviews/dist/processreviews-sept2014.jar SEMEVALTASK4PART2 12 13 8 2500 EXACT 0.55 3 >  /Users/davecarter/Dropbox/Thesis\ work/Results\ Sept\ 2014/semeval-subtask2-t12c13t8-2500-c055-3coiteration.txt 2>&1 &
+java -Xmx6000m -jar /Users/davecarter/Dropbox/Thesis\ work/workspace/process-reviews/dist/processreviews-sept2014.jar SEMEVALTASK4PART2 12 13 8 2500 EXACT 0.55 4 >  /Users/davecarter/Dropbox/Thesis\ work/Results\ Sept\ 2014/semeval-subtask2-t12c13t8-2500-c055-4coiteration.txt 2>&1 &
+java -Xmx6000m -jar /Users/davecarter/Dropbox/Thesis\ work/workspace/process-reviews/dist/processreviews-sept2014.jar SEMEVALTASK4PART2 12 13 8 2500 EXACT 0.55 5 >  /Users/davecarter/Dropbox/Thesis\ work/Results\ Sept\ 2014/semeval-subtask2-t12c13t8-2500-c055-5coiteration.txt 2>&1 &
+
+
+TASK2, cotraining baselines
+java -Xmx6000m -jar /Users/davecarter/Dropbox/Thesis\ work/workspace/process-reviews/dist/processreviews-sept2014.jar SEMEVALTASK4PART2 12 null 8 >  /Users/davecarter/Dropbox/Thesis\ work/Results\ Sept\ 2014/semeval-subtask2-t12cnt8-2500.txt 2>&1 &
+java -Xmx6000m -jar /Users/davecarter/Dropbox/Thesis\ work/workspace/process-reviews/dist/processreviews-sept2014.jar SEMEVALTASK4PART2 13 null 8 >  /Users/davecarter/Dropbox/Thesis\ work/Results\ Sept\ 2014/semeval-subtask2-t13cnt8-2500.txt 2>&1 &
+java -Xmx6000m -jar /Users/davecarter/Dropbox/Thesis\ work/workspace/process-reviews/dist/processreviews-sept2014.jar SEMEVALTASK4PART2 14 null 9 >  /Users/davecarter/Dropbox/Thesis\ work/Results\ Sept\ 2014/semeval-subtask2-t14cnt9-2500.txt 2>&1 &
+java -Xmx6000m -jar /Users/davecarter/Dropbox/Thesis\ work/workspace/process-reviews/dist/processreviews-sept2014.jar SEMEVALTASK4PART2 15 null 9 >  /Users/davecarter/Dropbox/Thesis\ work/Results\ Sept\ 2014/semeval-subtask2-t15cnt9-2500.txt 2>&1 &
+
+
+TASK1, no contraining
+java -Xmx6000m -jar /Users/davecarter/Dropbox/Thesis\ work/workspace/process-reviews/dist/processreviews-sept2014.jar SEMEVALTASK4PART1 6 null 8 2500 EXACT > /Users/davecarter/Dropbox/Thesis\ work/Results\ Sept\ 2014/semeval-subtask1-exact-t6cnt8-2500.txt 2>&1 &
+java -Xmx6000m -jar /Users/davecarter/Dropbox/Thesis\ work/workspace/process-reviews/dist/processreviews-sept2014.jar SEMEVALTASK4PART1 7 null 9 2500 EXACT > /Users/davecarter/Dropbox/Thesis\ work/Results\ Sept\ 2014/semeval-subtask1-exact-t7cnt9-2500.txt 2>&1 &
+java -Xmx6000m -jar /Users/davecarter/Dropbox/Thesis\ work/workspace/process-reviews/dist/processreviews-sept2014.jar SEMEVALTASK4PART1 6 null 8 2500 PARTIAL > /Users/davecarter/Dropbox/Thesis\ work/Results\ Sept\ 2014/semeval-subtask1-partial-t6cnt8-2500.txt 2>&1 &
+java -Xmx6000m -jar /Users/davecarter/Dropbox/Thesis\ work/workspace/process-reviews/dist/processreviews-sept2014.jar SEMEVALTASK4PART1 7 null 9 2500 PARTIAL > /Users/davecarter/Dropbox/Thesis\ work/Results\ Sept\ 2014/semeval-subtask1-partial-t7cnt9-2500.txt 2>&1 &
+
+TASK1, cotraining
+java -Xmx6000m -jar /Users/davecarter/Dropbox/Thesis\ work/workspace/process-reviews/dist/processreviews-sept2014.jar SEMEVALTASK4PART1 12 13 8 2500 EXACT >   /Users/davecarter/Dropbox/Thesis\ work/Results\ Sept\ 2014/semeval-subtask1-exact-t12c13t8-2500.txt 2>&1 &
+java -Xmx6000m -jar /Users/davecarter/Dropbox/Thesis\ work/workspace/process-reviews/dist/processreviews-sept2014.jar SEMEVALTASK4PART1 13 12 8 2500 EXACT >   /Users/davecarter/Dropbox/Thesis\ work/Results\ Sept\ 2014/semeval-subtask1-exact-t13c12t8-2500.txt 2>&1 &
+java -Xmx6000m -jar /Users/davecarter/Dropbox/Thesis\ work/workspace/process-reviews/dist/processreviews-sept2014.jar SEMEVALTASK4PART1 14 15 9 2500 EXACT >   /Users/davecarter/Dropbox/Thesis\ work/Results\ Sept\ 2014/semeval-subtask1-exact-t14c15t9-2500.txt 2>&1 &
+java -Xmx6000m -jar /Users/davecarter/Dropbox/Thesis\ work/workspace/process-reviews/dist/processreviews-sept2014.jar SEMEVALTASK4PART1 15 14 9 2500 EXACT >   /Users/davecarter/Dropbox/Thesis\ work/Results\ Sept\ 2014/semeval-subtask1-exact-t15c14t9-2500.txt 2>&1 &
+java -Xmx6000m -jar /Users/davecarter/Dropbox/Thesis\ work/workspace/process-reviews/dist/processreviews-sept2014.jar SEMEVALTASK4PART1 12 13 8 2500 PARTIAL > /Users/davecarter/Dropbox/Thesis\ work/Results\ Sept\ 2014/semeval-subtask1-partial-t12c13t8-2500.txt 2>&1 &
+java -Xmx6000m -jar /Users/davecarter/Dropbox/Thesis\ work/workspace/process-reviews/dist/processreviews-sept2014.jar SEMEVALTASK4PART1 13 12 8 2500 PARTIAL > /Users/davecarter/Dropbox/Thesis\ work/Results\ Sept\ 2014/semeval-subtask1-partial-t13c12t8-2500.txt 2>&1 &
+java -Xmx6000m -jar /Users/davecarter/Dropbox/Thesis\ work/workspace/process-reviews/dist/processreviews-sept2014.jar SEMEVALTASK4PART1 14 15 9 2500 PARTIAL > /Users/davecarter/Dropbox/Thesis\ work/Results\ Sept\ 2014/semeval-subtask1-partial-t14c15t9-2500.txt 2>&1 &
+java -Xmx6000m -jar /Users/davecarter/Dropbox/Thesis\ work/workspace/process-reviews/dist/processreviews-sept2014.jar SEMEVALTASK4PART1 15 14 9 2500 PARTIAL > /Users/davecarter/Dropbox/Thesis\ work/Results\ Sept\ 2014/semeval-subtask1-partial-t15c14t9-2500.txt 2>&1 &
+
+TASK1, cotraining baselines
+java -Xmx6000m -jar /Users/davecarter/Dropbox/Thesis\ work/workspace/process-reviews/dist/processreviews-sept2014.jar SEMEVALTASK4PART1 12 null 8 2500 EXACT >   /Users/davecarter/Dropbox/Thesis\ work/Results\ Sept\ 2014/semeval-subtask1-exact-t12cnt8-2500.txt 2>&1 &
+java -Xmx6000m -jar /Users/davecarter/Dropbox/Thesis\ work/workspace/process-reviews/dist/processreviews-sept2014.jar SEMEVALTASK4PART1 13 null 8 2500 EXACT >   /Users/davecarter/Dropbox/Thesis\ work/Results\ Sept\ 2014/semeval-subtask1-exact-t13cnt8-2500.txt 2>&1 &
+java -Xmx6000m -jar /Users/davecarter/Dropbox/Thesis\ work/workspace/process-reviews/dist/processreviews-sept2014.jar SEMEVALTASK4PART1 14 null 9 2500 EXACT >   /Users/davecarter/Dropbox/Thesis\ work/Results\ Sept\ 2014/semeval-subtask1-exact-t14cnt9-2500.txt 2>&1 &
+java -Xmx6000m -jar /Users/davecarter/Dropbox/Thesis\ work/workspace/process-reviews/dist/processreviews-sept2014.jar SEMEVALTASK4PART1 15 null 9 2500 EXACT >   /Users/davecarter/Dropbox/Thesis\ work/Results\ Sept\ 2014/semeval-subtask1-exact-t15cnt9-2500.txt 2>&1 &
+java -Xmx6000m -jar /Users/davecarter/Dropbox/Thesis\ work/workspace/process-reviews/dist/processreviews-sept2014.jar SEMEVALTASK4PART1 12 null 8 2500 PARTIAL > /Users/davecarter/Dropbox/Thesis\ work/Results\ Sept\ 2014/semeval-subtask1-partial-t12cnt8-2500.txt 2>&1 &
+java -Xmx6000m -jar /Users/davecarter/Dropbox/Thesis\ work/workspace/process-reviews/dist/processreviews-sept2014.jar SEMEVALTASK4PART1 13 null 8 2500 PARTIAL > /Users/davecarter/Dropbox/Thesis\ work/Results\ Sept\ 2014/semeval-subtask1-partial-t13cnt8-2500.txt 2>&1 &
+java -Xmx6000m -jar /Users/davecarter/Dropbox/Thesis\ work/workspace/process-reviews/dist/processreviews-sept2014.jar SEMEVALTASK4PART1 14 null 9 2500 PARTIAL > /Users/davecarter/Dropbox/Thesis\ work/Results\ Sept\ 2014/semeval-subtask1-partial-t14cnt9-2500.txt 2>&1 &
+java -Xmx6000m -jar /Users/davecarter/Dropbox/Thesis\ work/workspace/process-reviews/dist/processreviews-sept2014.jar SEMEVALTASK4PART1 15 null 9 2500 PARTIAL > /Users/davecarter/Dropbox/Thesis\ work/Results\ Sept\ 2014/semeval-subtask1-partial-t15cnt9-2500.txt 2>&1 &
+
+
+TASK1, BINGLIU, CROSS VALIDATION
+
+java -Xmx6000m -jar /Users/davecarter/Dropbox/Thesis\ work/workspace/process-reviews/dist/processreviews-sept2014.jar SEMEVALTASK4PART1 1 null null 2500 EXACT > /Users/davecarter/Dropbox/Thesis\ work/Results\ Sept\ 2014/bingliu-subtask1-exact-t1cntn-2500.txt 2>&1 &
+java -Xmx6000m -jar /Users/davecarter/Dropbox/Thesis\ work/workspace/process-reviews/dist/processreviews-sept2014.jar SEMEVALTASK4PART1 2 null null 2500 EXACT > /Users/davecarter/Dropbox/Thesis\ work/Results\ Sept\ 2014/bingliu-subtask1-exact-t2cntn-2500.txt 2>&1 &
+java -Xmx6000m -jar /Users/davecarter/Dropbox/Thesis\ work/workspace/process-reviews/dist/processreviews-sept2014.jar SEMEVALTASK4PART1 3 null null 2500 EXACT > /Users/davecarter/Dropbox/Thesis\ work/Results\ Sept\ 2014/bingliu-subtask1-exact-t3cntn-2500.txt 2>&1 &
+java -Xmx6000m -jar /Users/davecarter/Dropbox/Thesis\ work/workspace/process-reviews/dist/processreviews-sept2014.jar SEMEVALTASK4PART1 4 null null 2500 EXACT > /Users/davecarter/Dropbox/Thesis\ work/Results\ Sept\ 2014/bingliu-subtask1-exact-t4cntn-2500.txt 2>&1 &
+java -Xmx6000m -jar /Users/davecarter/Dropbox/Thesis\ work/workspace/process-reviews/dist/processreviews-sept2014.jar SEMEVALTASK4PART1 5 null null 2500 EXACT > /Users/davecarter/Dropbox/Thesis\ work/Results\ Sept\ 2014/bingliu-subtask1-exact-t5cntn-2500.txt 2>&1 &
+
+java -Xmx6000m -jar /Users/davecarter/Dropbox/Thesis\ work/workspace/process-reviews/dist/processreviews-sept2014.jar SEMEVALTASK4PART1 1 null null 2500 PARTIAL > /Users/davecarter/Dropbox/Thesis\ work/Results\ Sept\ 2014/bingliu-subtask1-partial-t1cntn-2500.txt 2>&1 &
+java -Xmx6000m -jar /Users/davecarter/Dropbox/Thesis\ work/workspace/process-reviews/dist/processreviews-sept2014.jar SEMEVALTASK4PART1 2 null null 2500 PARTIAL > /Users/davecarter/Dropbox/Thesis\ work/Results\ Sept\ 2014/bingliu-subtask1-partial-t2cntn-2500.txt 2>&1 &
+java -Xmx6000m -jar /Users/davecarter/Dropbox/Thesis\ work/workspace/process-reviews/dist/processreviews-sept2014.jar SEMEVALTASK4PART1 3 null null 2500 PARTIAL > /Users/davecarter/Dropbox/Thesis\ work/Results\ Sept\ 2014/bingliu-subtask1-partial-t3cntn-2500.txt 2>&1 &
+java -Xmx6000m -jar /Users/davecarter/Dropbox/Thesis\ work/workspace/process-reviews/dist/processreviews-sept2014.jar SEMEVALTASK4PART1 4 null null 2500 PARTIAL > /Users/davecarter/Dropbox/Thesis\ work/Results\ Sept\ 2014/bingliu-subtask1-partial-t4cntn-2500.txt 2>&1 &
+java -Xmx6000m -jar /Users/davecarter/Dropbox/Thesis\ work/workspace/process-reviews/dist/processreviews-sept2014.jar SEMEVALTASK4PART1 5 null null 2500 PARTIAL > /Users/davecarter/Dropbox/Thesis\ work/Results\ Sept\ 2014/bingliu-subtask1-partial-t5cntn-2500.txt 2>&1 &
+
+(underway)
+java -Xmx6000m -jar /Users/davecarter/Dropbox/Thesis\ work/workspace/process-reviews/dist/processreviews-nov2014-nogenericremoval.jar SEMEVALTASK4PART1 1 null null 2500 EXACT > /Users/davecarter/Dropbox/Thesis\ work/Results\ Nov\ 2014/bingliu-subtask1-exact-t1cntn-2500-nogen.txt 2>&1 &
+java -Xmx6000m -jar /Users/davecarter/Dropbox/Thesis\ work/workspace/process-reviews/dist/processreviews-nov2014-nogenericremoval.jar SEMEVALTASK4PART1 2 null null 2500 EXACT > /Users/davecarter/Dropbox/Thesis\ work/Results\ Nov\ 2014/bingliu-subtask1-exact-t2cntn-2500-nogen.txt 2>&1 &
+java -Xmx6000m -jar /Users/davecarter/Dropbox/Thesis\ work/workspace/process-reviews/dist/processreviews-nov2014-nogenericremoval.jar SEMEVALTASK4PART1 3 null null 2500 EXACT > /Users/davecarter/Dropbox/Thesis\ work/Results\ Nov\ 2014/bingliu-subtask1-exact-t3cntn-2500-nogen.txt 2>&1 &
+java -Xmx6000m -jar /Users/davecarter/Dropbox/Thesis\ work/workspace/process-reviews/dist/processreviews-nov2014-nogenericremoval.jar SEMEVALTASK4PART1 4 null null 2500 EXACT > /Users/davecarter/Dropbox/Thesis\ work/Results\ Nov\ 2014/bingliu-subtask1-exact-t4cntn-2500-nogen.txt 2>&1 &
+java -Xmx6000m -jar /Users/davecarter/Dropbox/Thesis\ work/workspace/process-reviews/dist/processreviews-nov2014-nogenericremoval.jar SEMEVALTASK4PART1 5 null null 2500 EXACT > /Users/davecarter/Dropbox/Thesis\ work/Results\ Nov\ 2014/bingliu-subtask1-exact-t5cntn-2500-nogen.txt 2>&1 &
+
+(underway)
+java -Xmx6000m -jar /Users/davecarter/Dropbox/Thesis\ work/workspace/process-reviews/dist/processreviews-nov2014-nogenericremoval.jar SEMEVALTASK4PART1 1 null null 2500 PARTIAL > /Users/davecarter/Dropbox/Thesis\ work/Results\ Nov\ 2014/bingliu-subtask1-partial-t1cntn-2500-nogen.txt 2>&1 &
+java -Xmx6000m -jar /Users/davecarter/Dropbox/Thesis\ work/workspace/process-reviews/dist/processreviews-nov2014-nogenericremoval.jar SEMEVALTASK4PART1 2 null null 2500 PARTIAL > /Users/davecarter/Dropbox/Thesis\ work/Results\ Nov\ 2014/bingliu-subtask1-partial-t2cntn-2500-nogen.txt 2>&1 &
+java -Xmx6000m -jar /Users/davecarter/Dropbox/Thesis\ work/workspace/process-reviews/dist/processreviews-nov2014-nogenericremoval.jar SEMEVALTASK4PART1 3 null null 2500 PARTIAL > /Users/davecarter/Dropbox/Thesis\ work/Results\ Nov\ 2014/bingliu-subtask1-partial-t3cntn-2500-nogen.txt 2>&1 &
+java -Xmx6000m -jar /Users/davecarter/Dropbox/Thesis\ work/workspace/process-reviews/dist/processreviews-nov2014-nogenericremoval.jar SEMEVALTASK4PART1 4 null null 2500 PARTIAL > /Users/davecarter/Dropbox/Thesis\ work/Results\ Nov\ 2014/bingliu-subtask1-partial-t4cntn-2500-nogen.txt 2>&1 &
+java -Xmx6000m -jar /Users/davecarter/Dropbox/Thesis\ work/workspace/process-reviews/dist/processreviews-nov2014-nogenericremoval.jar SEMEVALTASK4PART1 5 null null 2500 PARTIAL > /Users/davecarter/Dropbox/Thesis\ work/Results\ Nov\ 2014/bingliu-subtask1-partial-t5cntn-2500-nogen.txt 2>&1 &
+
+
+SENTENCES, BINGLIU, CROSS VALIDATION
+
+java -Xmx7000m -jar /Users/davecarter/Dropbox/Thesis\ work/workspace/process-reviews/dist/processreviews-sept2014.jar BINGLIU 1 null null 2500 PARTIAL >  /Users/davecarter/Dropbox/Thesis\ work/Results\ Sept\ 2014/bingliu-sentences-t1cntn-2500.txt 2>&1 &
+java -Xmx7000m -jar /Users/davecarter/Dropbox/Thesis\ work/workspace/process-reviews/dist/processreviews-sept2014.jar BINGLIU 2 null null 2500 PARTIAL >  /Users/davecarter/Dropbox/Thesis\ work/Results\ Sept\ 2014/bingliu-sentences-t2cntn-2500.txt 2>&1 &
+java -Xmx7000m -jar /Users/davecarter/Dropbox/Thesis\ work/workspace/process-reviews/dist/processreviews-sept2014.jar BINGLIU 3 null null 2500 PARTIAL >  /Users/davecarter/Dropbox/Thesis\ work/Results\ Sept\ 2014/bingliu-sentences-t3cntn-2500.txt 2>&1 &
+java -Xmx7000m -jar /Users/davecarter/Dropbox/Thesis\ work/workspace/process-reviews/dist/processreviews-sept2014.jar BINGLIU 4 null null 2500 PARTIAL >  /Users/davecarter/Dropbox/Thesis\ work/Results\ Sept\ 2014/bingliu-sentences-t4cntn-2500.txt 2>&1 &
+java -Xmx7000m -jar /Users/davecarter/Dropbox/Thesis\ work/workspace/process-reviews/dist/processreviews-sept2014.jar BINGLIU 5 null null 2500 PARTIAL >  /Users/davecarter/Dropbox/Thesis\ work/Results\ Sept\ 2014/bingliu-sentences-t5cntn-2500.txt 2>&1 &
+
+(underway Nov 8)
+java -Xmx6000m -jar /Users/davecarter/Dropbox/Thesis\ work/workspace/process-reviews/dist/processreviews-nov2014-nogenericremoval.jar BINGLIU 1 null null 2500 PARTIAL >  /Users/davecarter/Dropbox/Thesis\ work/Results\ Nov\ 2014/bingliu-sentences-t1cntn-2500-nogen.txt 2>&1 &
+java -Xmx6000m -jar /Users/davecarter/Dropbox/Thesis\ work/workspace/process-reviews/dist/processreviews-nov2014-nogenericremoval.jar BINGLIU 2 null null 2500 PARTIAL >  /Users/davecarter/Dropbox/Thesis\ work/Results\ Nov\ 2014/bingliu-sentences-t2cntn-2500-nogen.txt 2>&1 &
+java -Xmx6000m -jar /Users/davecarter/Dropbox/Thesis\ work/workspace/process-reviews/dist/processreviews-nov2014-nogenericremoval.jar BINGLIU 3 null null 2500 PARTIAL >  /Users/davecarter/Dropbox/Thesis\ work/Results\ Nov\ 2014/bingliu-sentences-t3cntn-2500-nogen.txt 2>&1 &
+java -Xmx6000m -jar /Users/davecarter/Dropbox/Thesis\ work/workspace/process-reviews/dist/processreviews-nov2014-nogenericremoval.jar BINGLIU 4 null null 2500 PARTIAL >  /Users/davecarter/Dropbox/Thesis\ work/Results\ Nov\ 2014/bingliu-sentences-t4cntn-2500-nogen.txt 2>&1 &
+java -Xmx6000m -jar /Users/davecarter/Dropbox/Thesis\ work/workspace/process-reviews/dist/processreviews-nov2014-nogenericremoval.jar BINGLIU 5 null null 2500 PARTIAL >  /Users/davecarter/Dropbox/Thesis\ work/Results\ Nov\ 2014/bingliu-sentences-t5cntn-2500-nogen.txt 2>&1 &
+
+SENTENCES, BINGLIU, DOMAIN ADAPTATION
+
+java -Xmx7000m -jar /Users/davecarter/Dropbox/Thesis\ work/workspace/process-reviews/dist/processreviews-sept2014.jar BINGLIU 2,3,4,5 null 1 2500 PARTIAL >  /Users/davecarter/Dropbox/Thesis\ work/Results\ Sept\ 2014/bingliu-sentences-t2345cnt1-2500.txt 2>&1 &
+java -Xmx7000m -jar /Users/davecarter/Dropbox/Thesis\ work/workspace/process-reviews/dist/processreviews-sept2014.jar BINGLIU 1,3,4,5 null 2 2500 PARTIAL >  /Users/davecarter/Dropbox/Thesis\ work/Results\ Sept\ 2014/bingliu-sentences-t1345cnt2-2500.txt 2>&1 &
+java -Xmx7000m -jar /Users/davecarter/Dropbox/Thesis\ work/workspace/process-reviews/dist/processreviews-sept2014.jar BINGLIU 1,2,4,5 null 3 2500 PARTIAL >  /Users/davecarter/Dropbox/Thesis\ work/Results\ Sept\ 2014/bingliu-sentences-t1245cnt3-2500.txt 2>&1 &
+java -Xmx7000m -jar /Users/davecarter/Dropbox/Thesis\ work/workspace/process-reviews/dist/processreviews-sept2014.jar BINGLIU 1,2,3,5 null 4 2500 PARTIAL >  /Users/davecarter/Dropbox/Thesis\ work/Results\ Sept\ 2014/bingliu-sentences-t1235cnt4-2500.txt 2>&1 &
+java -Xmx7000m -jar /Users/davecarter/Dropbox/Thesis\ work/workspace/process-reviews/dist/processreviews-sept2014.jar BINGLIU 1,2,3,4 null 5 2500 PARTIAL >  /Users/davecarter/Dropbox/Thesis\ work/Results\ Sept\ 2014/bingliu-sentences-t1234cnt5-2500.txt 2>&1 &
+
+(started)
+java -Xmx7000m -jar /Users/davecarter/Dropbox/Thesis\ work/workspace/process-reviews/dist/processreviews-nov2014-nogenericremoval.jar BINGLIU 2,3,4,5 null 1 2500 PARTIAL >  /Users/davecarter/Dropbox/Thesis\ work/Results\ Nov\ 2014/bingliu-sentences-t2345cnt1-2500-nogen.txt 2>&1 &
+java -Xmx7000m -jar /Users/davecarter/Dropbox/Thesis\ work/workspace/process-reviews/dist/processreviews-nov2014-nogenericremoval.jar BINGLIU 1,3,4,5 null 2 2500 PARTIAL >  /Users/davecarter/Dropbox/Thesis\ work/Results\ Nov\ 2014/bingliu-sentences-t1345cnt2-2500-nogen.txt 2>&1 &
+java -Xmx7000m -jar /Users/davecarter/Dropbox/Thesis\ work/workspace/process-reviews/dist/processreviews-nov2014-nogenericremoval.jar BINGLIU 1,2,4,5 null 3 2500 PARTIAL >  /Users/davecarter/Dropbox/Thesis\ work/Results\ Nov\ 2014/bingliu-sentences-t1245cnt3-2500-nogen.txt 2>&1 &
+java -Xmx7000m -jar /Users/davecarter/Dropbox/Thesis\ work/workspace/process-reviews/dist/processreviews-nov2014-nogenericremoval.jar BINGLIU 1,2,3,5 null 4 2500 PARTIAL >  /Users/davecarter/Dropbox/Thesis\ work/Results\ Nov\ 2014/bingliu-sentences-t1235cnt4-2500-nogen.txt 2>&1 &
+java -Xmx7000m -jar /Users/davecarter/Dropbox/Thesis\ work/workspace/process-reviews/dist/processreviews-nov2014-nogenericremoval.jar BINGLIU 1,2,3,4 null 5 2500 PARTIAL >  /Users/davecarter/Dropbox/Thesis\ work/Results\ Nov\ 2014/bingliu-sentences-t1234cnt5-2500-nogen.txt 2>&1 &
+
+
+SENTENCES, BINGLIU, DOMAIN ADAPTATION COTRAINING
+
+java -Xmx7000m -jar /Users/davecarter/Dropbox/Thesis\ work/workspace/process-reviews/dist/processreviews-sept2014.jar BINGLIU 2 3,4,5 1 2500 PARTIAL >  /Users/davecarter/Dropbox/Thesis\ work/Results\ Sept\ 2014/bingliu-sentences-t2c345t1-2500.txt 2>&1 &
+java -Xmx7000m -jar /Users/davecarter/Dropbox/Thesis\ work/workspace/process-reviews/dist/processreviews-sept2014.jar BINGLIU 3 2,4,5 1 2500 PARTIAL >  /Users/davecarter/Dropbox/Thesis\ work/Results\ Sept\ 2014/bingliu-sentences-t3c245t1-2500.txt 2>&1 &
+java -Xmx7000m -jar /Users/davecarter/Dropbox/Thesis\ work/workspace/process-reviews/dist/processreviews-sept2014.jar BINGLIU 4 2,3,5 1 2500 PARTIAL >  /Users/davecarter/Dropbox/Thesis\ work/Results\ Sept\ 2014/bingliu-sentences-t4c235t1-2500.txt 2>&1 &
+java -Xmx7000m -jar /Users/davecarter/Dropbox/Thesis\ work/workspace/process-reviews/dist/processreviews-sept2014.jar BINGLIU 5 2,3,4 1 2500 PARTIAL >  /Users/davecarter/Dropbox/Thesis\ work/Results\ Sept\ 2014/bingliu-sentences-t5c234t1-2500.txt 2>&1 &
+
+java -Xmx7000m -jar /Users/davecarter/Dropbox/Thesis\ work/workspace/process-reviews/dist/processreviews-sept2014.jar BINGLIU 1 3,4,5 2 2500 PARTIAL >  /Users/davecarter/Dropbox/Thesis\ work/Results\ Sept\ 2014/bingliu-sentences-t1c345t2-2500.txt 2>&1 &
+java -Xmx7000m -jar /Users/davecarter/Dropbox/Thesis\ work/workspace/process-reviews/dist/processreviews-sept2014.jar BINGLIU 3 1,4,5 2 2500 PARTIAL >  /Users/davecarter/Dropbox/Thesis\ work/Results\ Sept\ 2014/bingliu-sentences-t3c145t2-2500.txt 2>&1 &
+java -Xmx7000m -jar /Users/davecarter/Dropbox/Thesis\ work/workspace/process-reviews/dist/processreviews-sept2014.jar BINGLIU 4 1,3,5 2 2500 PARTIAL >  /Users/davecarter/Dropbox/Thesis\ work/Results\ Sept\ 2014/bingliu-sentences-t4c135t2-2500.txt 2>&1 &
+java -Xmx7000m -jar /Users/davecarter/Dropbox/Thesis\ work/workspace/process-reviews/dist/processreviews-sept2014.jar BINGLIU 5 1,3,4 2 2500 PARTIAL >  /Users/davecarter/Dropbox/Thesis\ work/Results\ Sept\ 2014/bingliu-sentences-t5c134t2-2500.txt 2>&1 &
+
+java -Xmx7000m -jar /Users/davecarter/Dropbox/Thesis\ work/workspace/process-reviews/dist/processreviews-sept2014.jar BINGLIU 1 2,4,5 3 2500 PARTIAL >  /Users/davecarter/Dropbox/Thesis\ work/Results\ Sept\ 2014/bingliu-sentences-t1c245t3-2500.txt 2>&1 &
+java -Xmx7000m -jar /Users/davecarter/Dropbox/Thesis\ work/workspace/process-reviews/dist/processreviews-sept2014.jar BINGLIU 2 1,4,5 3 2500 PARTIAL >  /Users/davecarter/Dropbox/Thesis\ work/Results\ Sept\ 2014/bingliu-sentences-t2c145t3-2500.txt 2>&1 &
+java -Xmx7000m -jar /Users/davecarter/Dropbox/Thesis\ work/workspace/process-reviews/dist/processreviews-sept2014.jar BINGLIU 4 1,2,5 3 2500 PARTIAL >  /Users/davecarter/Dropbox/Thesis\ work/Results\ Sept\ 2014/bingliu-sentences-t4c125t3-2500.txt 2>&1 &
+java -Xmx7000m -jar /Users/davecarter/Dropbox/Thesis\ work/workspace/process-reviews/dist/processreviews-sept2014.jar BINGLIU 5 1,2,4 3 2500 PARTIAL >  /Users/davecarter/Dropbox/Thesis\ work/Results\ Sept\ 2014/bingliu-sentences-t5c124t3-2500.txt 2>&1 &
+
+java -Xmx7000m -jar /Users/davecarter/Dropbox/Thesis\ work/workspace/process-reviews/dist/processreviews-sept2014.jar BINGLIU 1 2,3,5 4 2500 PARTIAL >  /Users/davecarter/Dropbox/Thesis\ work/Results\ Sept\ 2014/bingliu-sentences-t1c235t4-2500.txt 2>&1 &
+java -Xmx7000m -jar /Users/davecarter/Dropbox/Thesis\ work/workspace/process-reviews/dist/processreviews-sept2014.jar BINGLIU 2 1,3,5 4 2500 PARTIAL >  /Users/davecarter/Dropbox/Thesis\ work/Results\ Sept\ 2014/bingliu-sentences-t2c135t4-2500.txt 2>&1 &
+java -Xmx7000m -jar /Users/davecarter/Dropbox/Thesis\ work/workspace/process-reviews/dist/processreviews-sept2014.jar BINGLIU 3 1,2,5 4 2500 PARTIAL >  /Users/davecarter/Dropbox/Thesis\ work/Results\ Sept\ 2014/bingliu-sentences-t3c125t4-2500.txt 2>&1 &
+java -Xmx7000m -jar /Users/davecarter/Dropbox/Thesis\ work/workspace/process-reviews/dist/processreviews-sept2014.jar BINGLIU 5 1,2,3 4 2500 PARTIAL >  /Users/davecarter/Dropbox/Thesis\ work/Results\ Sept\ 2014/bingliu-sentences-t5c123t4-2500.txt 2>&1 &
+
+java -Xmx7000m -jar /Users/davecarter/Dropbox/Thesis\ work/workspace/process-reviews/dist/processreviews-sept2014.jar BINGLIU 1 2,3,4 5 2500 PARTIAL >  /Users/davecarter/Dropbox/Thesis\ work/Results\ Sept\ 2014/bingliu-sentences-t1c234t5-2500.txt 2>&1 &
+java -Xmx7000m -jar /Users/davecarter/Dropbox/Thesis\ work/workspace/process-reviews/dist/processreviews-sept2014.jar BINGLIU 2 1,3,4 5 2500 PARTIAL >  /Users/davecarter/Dropbox/Thesis\ work/Results\ Sept\ 2014/bingliu-sentences-t2c134t5-2500.txt 2>&1 &
+java -Xmx7000m -jar /Users/davecarter/Dropbox/Thesis\ work/workspace/process-reviews/dist/processreviews-sept2014.jar BINGLIU 3 1,2,4 5 2500 PARTIAL >  /Users/davecarter/Dropbox/Thesis\ work/Results\ Sept\ 2014/bingliu-sentences-t3c124t5-2500.txt 2>&1 &
+java -Xmx7000m -jar /Users/davecarter/Dropbox/Thesis\ work/workspace/process-reviews/dist/processreviews-sept2014.jar BINGLIU 4 1,2,3 5 2500 PARTIAL >  /Users/davecarter/Dropbox/Thesis\ work/Results\ Sept\ 2014/bingliu-sentences-t4c123t5-2500.txt 2>&1 &
+
+
+
+
+EC2 stuff:
+
+https://console.aws.amazon.com/ec2/v2/home?region=us-west-2#Instances:
+ssh -i ~/.ssh/amazon-ec2-free.pem ec2-user@54.213.228.153
+scp -i /Users/davecart/.ssh/amazon-ec2-free.pem -r ~/Dropbox/EC2\ image/* ec2-user@54.213.248.172:

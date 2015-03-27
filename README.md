@@ -16,7 +16,7 @@ The executable version of this project is in the bin directory.
 Command line arguments can be inspected by running the command:  
 `java -jar processreviews-sept2014.jar help`
 
-The Stanford CoreNLP models are also required (stanford-corenlp-3.3.1-models.jar) and should be put in the bin directory.  This can be downloaded from http://search.maven.org/#browse%7C304725258
+The Stanford CoreNLP models are also required (stanford-corenlp-3.3.1-models.jar) and should be put in the bin directory (if running from the command line) and the lib directory (if using the source code itself).  This can be downloaded from http://search.maven.org/#browse%7C304725258
 
 ### Source code
 

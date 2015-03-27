@@ -20,4 +20,19 @@ The Stanford CoreNLP models are also required (stanford-corenlp-3.3.1-models.jar
 
 ### Source code
 
-Coming March 2015.
+ProcessReviews.java is the main class.
+
+To use the source code, you'll have to edit a couple of things to start:
+- in jwnl14_file_properties.xml, you'll need to update the *dictionary_path* parameter
+- in *ProcessReviews.java*, you'll have to update the *defaultRootDir* variable to point to the required data sets
+
+You can use the *exportjar.jardesc* file in Eclipse to package up a new executable jar file.
+
+### Citing
+
+If using this code for anything academic, please cite the paper:
+
+Inferring aspect-specific opinion structure in product reviews using co-training
+Dave Carter and Diana Inkpen
+A. Gelbukh (ed.): CICLing 2015, part II, LNCS 9042, pp. to be determined, 2015.
+DOI: 10.1007/978-3-319-18117-2_z

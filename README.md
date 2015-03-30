@@ -1,5 +1,5 @@
 # Inferring aspect-specific opinion structure in product reviews using co-training
-This is an algorithm for aspect-based sentiment analysis using co-training, an semi-supervised machine learning algorithm that partitions the machine learning features into two sufficient and uncorrelated "views" and then self-learns.
+This is an algorithm for aspect-based sentiment analysis using co-training, a semi-supervised machine learning algorithm that partitions the machine learning features into two sufficient and uncorrelated "views" and then self-learns.
 
 ### Required data sets
 
@@ -32,7 +32,7 @@ You can use the *exportjar.jardesc* file in Eclipse to package up a new executab
 
 ### Citing
 
-If using this code for anything academic, please cite the paper:
+If using this code, please cite the paper:
 
     @inproceedings{carter:aspectspecificcotraining,
      author = {Carter, Dave and Inkpen, Diana},
